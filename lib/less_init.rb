@@ -12,7 +12,7 @@ module LessInitializer
     end
     app.use Rack::Less,
       :root      => Padrino.root,
-      :source    => 'app/stylesheets',
+      :source    => '/stylesheets',
       :public    => 'public',
       :hosted_at => 'stylesheets'
 
