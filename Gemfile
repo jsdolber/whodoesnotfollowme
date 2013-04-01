@@ -11,6 +11,9 @@ gem 'rake'
 gem 'sinatra-flash', :require => 'sinatra/flash'
 
 # Component requirements
+gem 'rack-google-analytics', :require => "rack/google-analytics"
+gem 'omniauth'
+gem 'rack-recaptcha', :require => "rack/recaptcha"
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'rack-less'
 gem 'less'
@@ -42,6 +45,12 @@ gem 'rack-test'
 
 # Padrino Stable Gem
 gem 'padrino', '0.10.7'
+
+gem 'twitter'
+
+gem 'redis'
+
+gem 'omniauth-twitter'
 
 # Or Padrino Edge
 # gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'

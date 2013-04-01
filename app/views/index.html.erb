@@ -1,0 +1,67 @@
+<div class="hero-unit" style="background-color: #E0EAF4;">
+    <div>
+      <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="left:50px;top:50px;">
+        <a class="addthis_button_preferred_1"></a>
+        <a class="addthis_button_preferred_2"></a>
+        <a class="addthis_button_preferred_3"></a>
+        <a class="addthis_button_preferred_4"></a>
+        <a class="addthis_button_compact"></a>
+      </div>
+      <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515387e41325a358"></script>
+    </div>
+  
+    <div clas="row" class="span11 pagination-centered logo">
+      <a href="/">
+        <h1>who does not follow<span class="me">me</span>back</h1>
+      </a>
+    </div>
+    <div clas="row" class="span11 pagination-centered searchbox">
+      <form id="form">
+        <div class="input-append">
+          <input type="text" id="search-input" placeholder="@twitter" autofocus="autofocus" autocomplete="off">
+          <button id="search-button" class="btn" type="button">
+              <i class="icon-eye-open icon-large"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div id="loading-bar" class="row push">
+      <div class="span6 center-table text-center">
+        <div class="span2"><hr/></div>
+        <div class="span1">
+          <span class="icon-leaf separator"></span>
+          <span class="icon-refresh icon-spin separator"></span>
+          </div>
+        <div class="span2"><hr/></div>
+       </div>
+     </div>
+     <div class="row">
+       <div class="span12">
+        <div id="err-modal" class="alert alert-error span6 text-center center-table">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <span id="err-msg"></span>
+        </div>
+        <div id="info-modal" class="alert alert-info span6 text-center center-table">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <span id="info-msg"></span>
+        </div>
+       </div>
+     </div>
+    <div class="row">
+      <div id="results" class="span12">
+       <table id="tbl-results" class="table table-bordered table-hover center-table">
+         <tbody>
+         </tbody>
+      </table>
+    </div>
+  </div>
+    </div>
+
+    <div id="exact-match-label" class="type-label" >
+    </div>
+    <script type="text/javascript">
+      var is_auth = <%= @is_auth %>;
+   </script>
+</div>
+</div>

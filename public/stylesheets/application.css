@@ -1,0 +1,195 @@
+div.logo {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  font-family: Helvetica;
+}
+
+div.logo h1 {
+  font-size: 80px;
+  color: gray;
+}
+
+div.logo h4 {
+  color: #B6B6B6;
+}
+
+.logo .me {
+  color: darkturquoise;
+}
+
+
+.logo a:link {text-decoration: none; color: black}
+.logo a:visited {text-decoration: none;}
+.logo a:hover {text-decoration: none;}
+.logo a:active {text-decoration: none;}
+
+
+#search-input {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: white;
+  /*background-image: none;*/
+  background-origin: padding-box;
+  /*background-size: auto;*/
+  border-color: #E4E4E4;
+  border-radius: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: #555 0px 0px 1px 0px inset;
+  color: #555;
+
+  /*display: inline-block;*/
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  /*font-style: normal;*/
+  /*font-variant: normal;*/
+  /*font-weight: normal;*/
+  height: 50px;
+  line-height: 40px;
+  /*letter-spacing: normal;*/
+  /*text-align: start;*/
+  text-indent: 6px;
+
+  vertical-align: middle;
+  width: 460px;
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+#search-button {
+  background-color: #8F8F8F;
+  border-color: #8F8F8F;
+  border-radius: 8px;
+  border-style: solid;
+  cursor: pointer;
+  height: 58px;
+  width: 62px;
+  margin-left: 0px;
+  background-color: darkgray;
+  background-image: none;
+  border-color: #8F8F8F;
+  border-radius: 5px;
+  border-style: solid;
+  cursor: pointer;
+  height: 58px;
+  top: 8px;
+  vertical-align: middle;
+  width: 62px;
+}
+
+
+/* prevent default table highlight. */
+.table tbody tr:hover td {
+  background-color: transparent;
+}
+
+#footer {
+  text-align: center;
+}
+
+#footer ul {
+  margin-left: 0px;
+  margin-top:20px;
+}
+
+#footer li {
+  list-style: none;
+  /*float: left;*/
+  margin-right: 7px;
+  padding-right: 7px;
+  border-right: 1px solid silver;
+  display: inline;
+}
+
+#footer li.last {
+  padding-right: 0px;
+  border-right: none;
+}
+
+
+@media only screen and (min-height: 700px) {
+  div.logo {
+    margin-top: 80px;
+  }
+}
+
+.hero-unit { padding: 0px; }
+
+h1 {font-family: 'Dr Sugiyama', cursive;}
+
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+
+
+      /* Custom page CSS
+      -------------------------------------------------- */
+      /* Not required for template or sticky footer method. */
+
+      .container .credit {
+        margin: 20px 0;
+      }
+
+.hero-unit {
+ border-top-right-radius:0px;
+ border-top-left-radius:0px;
+ moz-top-right-border-radius:0px;
+ moz-top-left-border-radious:0px;
+}
+
+#results {margin-bottom:40px;margin-left:15px}
+.table {width:50%;background-color:white;}
+#results .table td {border-left:none;text-align:left;}
+.center-table
+{
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+.table th, .table td {vertical-align: middle;}
+
+.twuser {font-family: 'Droid Serif', serif;font-size:30px}
+
+.img-td {border-right:1px solid #ddd;text-align:center}
+
+.twname {margin-left:20px; color:silver;}
+
+.row {margin-bottom:20px}
+
+.separator {margin-top: 10px;}
+
+hr {border-bottom:1px solid white}
