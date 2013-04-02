@@ -12,6 +12,7 @@ $("#info-modal").toggle();
 $("#search-button").fadeTo(1, 0.5);
 $("#search-button").hover(function(){$(this).fadeTo(1, 1)});
 $(".hero-unit").hover(function(){$("#search-button").fadeTo(1, 0.5)});
+$("#av").toggle();
 var request;
 
 $(document).keypress(function(e) {
