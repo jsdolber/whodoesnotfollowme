@@ -34,7 +34,8 @@ else {
     make_request($("#search-input").val());
   }
 
-  $("#search-button").click(function () {
+  $("#search-button").click(function (e) {
+      e.preventDefault();
       make_request($("#search-input").val());
   });
 }
