@@ -1,6 +1,6 @@
 <div class="hero-unit" style="background-color: #E0EAF4;">
     <div>
-      <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="left:50px;top:50px;">
+      <div class="visible-desktop visible-tablet addthis_toolbox addthis_floating_style addthis_32x32_style" style="left:50px;top:50px;">
         <a class="addthis_button_preferred_1"></a>
         <a class="addthis_button_preferred_2"></a>
         <a class="addthis_button_preferred_3"></a>
@@ -12,8 +12,10 @@
     </div>
   
     <div clas="row" class="span11 pagination-centered logo">
+    <div id="push" class="visible-phone" ></div>
       <a href="/">
-        <h1>who does not follow<span class="me">me</span>back</h1>
+        <h1 class="visible-desktop visible-tablet">who does not follow<span class="me">me</span>back</h1>
+        <h3 class="visible-phone">who does not follow<span class="me">me</span>back</h3>
       </a>
     </div>
     <div clas="row" class="span11 pagination-centered searchbox">
@@ -50,7 +52,7 @@
      </div>
     <div class="row">
       <div id="results" class="span12">
-       <table id="tbl-results" class="table table-bordered table-hover center-table">
+       <table id="tbl-results" class="center-table table table-bordered table-hover">
          <tbody>
          </tbody>
       </table>

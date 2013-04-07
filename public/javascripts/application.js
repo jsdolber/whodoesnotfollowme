@@ -87,7 +87,7 @@ function make_request(name) {
                   .append($('<span>')
                     .html('@' + rec.screen_name).addClass('twuser')
                   )
-                  .append($('<small>')
+                  .append($('<small class="visible-desktop visible-tablet">')
                     .html(rec.name).addClass('twname')
                   )
               )

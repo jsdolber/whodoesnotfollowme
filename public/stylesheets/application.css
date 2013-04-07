@@ -1,3 +1,4 @@
+
 div.logo {
   margin-top: 80px;
   margin-bottom: 50px;
@@ -112,13 +113,14 @@ div.logo h4 {
 
 @media only screen and (min-height: 700px) {
   div.logo {
-    margin-top: 80px;
+    margin-top: 80px
   }
 }
 
 .hero-unit { padding: 0px; }
 
-h1 {font-family: 'Dr Sugiyama', cursive;}
+h1,h3 {font-family: 'Dr Sugiyama', cursive;}
+div.logo h3 {font-size:43px; margin-top:10px}
 
       html,
       body {
@@ -176,8 +178,8 @@ h1 {font-family: 'Dr Sugiyama', cursive;}
 #results .table td {border-left:none;text-align:left;}
 .center-table
 {
-  margin: 0 auto !important;
-  float: none !important;
+  margin: 0 auto;
+  float: none ;
 }
 
 .table th, .table td {vertical-align: middle;}
@@ -193,3 +195,14 @@ h1 {font-family: 'Dr Sugiyama', cursive;}
 .separator {margin-top: 10px;}
 
 hr {border-bottom:1px solid white}
+
+@media (max-width: 767px) { 
+  .hero-unit {margin-top:-80px;}
+  #search-input {width:260px;font-size:18px}
+  .table {width: 80%;}
+  #results {margin-left: 0px;}
+  td a {font-size: 15px;}
+  .center-table {width: 80%;}
+}
+
+
