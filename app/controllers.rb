@@ -53,6 +53,7 @@ Whodoesnotfollowme::App.controller do
         unfollowers.each do |arr| erik.users(arr).each do |user| u_unfollowers.push({"avatar" => user.profile_image_url, "name" => user.name, "screen_name" => user.screen_name }) end end
 
         rescue Twitter::Error::TooManyRequests => error
+          debugger
           return {:msg => "Too many attempts. Please try again in 15 minutes."}.to_json 
         rescue
           return {:msg => "Something went wrong"}
