@@ -19,14 +19,14 @@
       </a>
     </div>
     <div clas="row" class="span11 pagination-centered searchbox">
-      <div id="form">
+      <% form_tag '/unfollowers', :id => 'form', :method => 'unfollowers' do %>
         <div class="input-append">
           <input type="text" id="search-input" placeholder="@twitter" autofocus="autofocus" autocomplete="off">
           <button id="search-button" class="btn" type="button">
               <i class="icon-eye-open icon-large"></i>
           </button>
         </div>
-      </div>
+      <% end %>
     </div>
     <div id="loading-bar" class="row push">
       <div class="span6 center-table text-center">

@@ -36,10 +36,17 @@ Whodoesnotfollowme::App.controller do
  
         begin
 
-        erik = Twitter::Client.new(
-          :oauth_token => account.oauth_key,
-          :oauth_token_secret => account.oauth_secret
-        )
+        # erik = Twitter::Client.new(
+        #   :oauth_token => account.oauth_key,
+        #   :oauth_token_secret => account.oauth_secret
+        # )
+
+        erik = Twitter::REST::Client.new do |config|
+          config.consumer_key = '0OGA41vEkr7h4vjlF0tc3Q'
+          config.consumer_secret = '2xmrPnxfRnBma3X6UYLdn1mjs9yKeG8ZqapI3El8k8'
+          config.access_token        = account.oauth_key
+          config.access_token_secret = account.oauth_secret
+        end
         
         friends = Array.new
         followers = Array.new 

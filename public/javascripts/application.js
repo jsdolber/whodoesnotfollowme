@@ -17,7 +17,10 @@ var request;
 
 $(document).keypress(function(e) {
   if(e.which == 13 && $("#search-input").is(":focus")) {
+    event.preventDefault();
     $("#search-button").click();
+
+    return false;
   }
 });
 
@@ -42,15 +45,18 @@ else {
 }
 
 function make_request(name) {
+  
   if (request) {
         request.abort();
   }
 
-  request = $.ajax({
-        url: "/unfollowers",
-        type: "post",
-        data: {'name': $("#search-input").val()}
-  });
+  request = $.post( "unfollowers", { name: $("#search-input").val(), authenticity_token: $("[name='authenticity_token']").val() });
+
+  // request = $.ajax({
+  //       url: "/unfollowers",
+  //       type: "post",
+  //       data: {'name': $("#search-input").val(),  'authenticity_token': $("[name='authenticity_token']").val()}
+  // });
 
   $("#loading-bar").show();
   $(".icon-refresh").show();
