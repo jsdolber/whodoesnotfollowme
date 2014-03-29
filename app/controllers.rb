@@ -1,6 +1,8 @@
 Whodoesnotfollowme::App.controller do
     register Padrino::Admin::Helpers::AuthenticationHelpers
-
+    register Padrino::Sprockets
+    sprockets :minify => (Padrino.env == :production)
+    
     get :index do
       redirect '/back'
     end

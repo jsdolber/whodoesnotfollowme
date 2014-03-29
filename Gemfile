@@ -2,7 +2,7 @@ source "https://rubygems.org/"
 
 # Server requirements
 # gem 'thin' # or mongrel
-gem 'unicorn'
+gem 'thin'
 
 # gem 'trinidad', :platform => 'jruby'
 
@@ -51,6 +51,10 @@ gem 'twitter'
 gem 'redis'
 
 gem 'omniauth-twitter'
+
+gem 'padrino-sprockets', :require => ['padrino/sprockets'], :git => 'git://github.com/nightsailer/padrino-sprockets.git'
+gem 'uglifier', '2.1.1'
+gem 'yui-compressor', '0.9.6'
 
 # Or Padrino Edge
 # gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'
