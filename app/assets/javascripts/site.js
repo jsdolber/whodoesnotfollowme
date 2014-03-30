@@ -13,6 +13,7 @@ $("#search-button").fadeTo(1, 0.5);
 $("#search-button").hover(function(){$(this).fadeTo(1, 1)});
 $(".hero-unit").hover(function(){$("#search-button").fadeTo(1, 0.5)});
 $("#av").toggle();
+$("#twboxlink").click(function(){$("#search-input").focus()});
 var request;
 
 $(document).keypress(function(e) {
@@ -32,7 +33,7 @@ if (!is_auth) {
 }
 else {
 
-  if ($.cookie('pre-name') !== undefined) {
+  if ($.cookie('pre-name') !== undefined) {    
     $("#search-input").val($.cookie('pre-name'));
     $.removeCookie('pre-name');
     make_request($("#search-input").val());
@@ -123,6 +124,7 @@ function make_request(name) {
   request.always(function () {
     $(".icon-leaf").show();
     $(".icon-refresh").hide();
+    $(".intro").hide();
   }); 
 }
 

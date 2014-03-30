@@ -11,12 +11,12 @@
       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515387e41325a358"></script>
     </div>
   
-    <div clas="row" class="span11 pagination-centered logo">
-    <div id="push" class="visible-phone" ></div>
-      <a href="/">
-        <h1 class="visible-desktop visible-tablet">who does not follow<span class="me">me</span>back</h1>
-        <h3 class="visible-phone">who does not follow<span class="me">me</span>back</h3>
-      </a>
+    <div class="span11 pagination-centered logo row">
+      <div id="push" class="visible-phone" ></div>
+        <a href="/">
+          <h1 class="visible-desktop visible-tablet">who does not follow<span class="me">me</span>back</h1>
+          <h3 class="visible-phone">who does not follow<span class="me">me</span>back</h3>
+        </a>
     </div>
     <div clas="row" class="span11 pagination-centered searchbox">
       <% form_tag '/unfollowers', :id => 'form', :method => 'unfollowers' do %>
@@ -56,10 +56,18 @@
          <tbody>
          </tbody>
        </table>
+      </div>
     </div>
-  </div>
+</div>
+    <div class="intro row">
+      <h1>Find out who doesn't follow you back at Twitter!</h1>
+      <ol>
+        <li>1. Enter your username in the <a id="twboxlink" href="#">@twitter</a> box. </li>
+        <li>2. Press enter.</li>
+        <li>3. That's it! </li>
+        <li class="last">It's free, no registration required and no surprise tweets!</li>
+      </ol>
     </div>
-
     <div id="exact-match-label" class="type-label" >
     </div>
     <script type="text/javascript">

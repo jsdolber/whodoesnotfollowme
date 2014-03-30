@@ -1,3 +1,6 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 div.logo {
   margin-top: 80px;
@@ -24,6 +27,11 @@ div.logo h4 {
 .logo a:hover {text-decoration: none;}
 .logo a:active {text-decoration: none;}
 
+.intro {text-align: center;margin-top: 40px}
+.intro h1 {font-size: 160%}
+.intro ol {font-size: 120%; margin-top: 30px; }
+.intro ol li {padding: 10px; color:#555;}
+.intro ol li.last {font-weight: bold;margin-top: 30px;}
 
 #search-input {
   background-attachment: scroll;
@@ -119,7 +127,7 @@ div.logo h4 {
 
 .hero-unit { padding: 0px; }
 
-h1,h3 {font-family: 'Dr Sugiyama', cursive;}
+.logo h1, .logo h3 {font-family: 'Dr Sugiyama', cursive;}
 div.logo h3 {font-size:43px; margin-top:10px}
 
       html,
