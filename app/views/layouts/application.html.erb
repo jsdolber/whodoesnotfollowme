@@ -3,34 +3,48 @@
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
-    <meta property="og:image" content="http://i.imgur.com/Tp1IYRp.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Find who doesn't follow you back at twitter. No account needed, no surprise tweets." />
+    <meta name="description" content="Find who doesn't follow you back at twitter. No registration needed, no surprise tweets." />
     <meta name="keywords" content="twitter, follow, unfollow, followers, unfollowers." />
+
+    <meta name='og:title' content='whodoesnotfollow.me back' />
+    <meta name='og:site_name' content='Who Does Not Follow Me Back' />
+    <meta name='og:url' content='http://whodoesnotfollow.me' />
+    <meta name='og:description' content='Find who doesn''t follow you back at twitter. No registration needed, no surprise tweets.' />
+
+    <meta name='twitter:title' content='whodoesnotfollow.me back' />
+    <meta name='twitter:url' content='http://whodoesnotfollow.me' />
+    <meta name='twitter:description' content='Find who doesn''t follow you back at twitter. No registration needed, no surprise tweets.'/>
+
     <link href='http://fonts.googleapis.com/css?family=Dr+Sugiyama' rel='stylesheet' type='text/css'/>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'/>
-    <title><%= "whodoesnotfollow.me/back" %></title>
+    <title><%= "whodoesnotfollow.me back" %></title>
       
     <script src="/assets/jquery.js"></script>
     <script src="/assets/jquery.cookie.js"></script>
+    <link href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
+    <link href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet' type='text/css'/>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <%= stylesheet_link_tag 'bootstrap.min', 'bootstrap-responsive', 'font-awesome.min', 'application' %>
+    <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag 'application' %>
 
   </head>
   <body>
   <div id="wrap">
 	  <div class="container">
-       <%= yield %>
+       <div class="row">
+          <%= yield %>
+       </div>
+       <div class="row ads">
+        <%= partial 'ads' %>
+       </div>
      </div> <!-- /container -->
    </div>
    <div id="footer">
       <div class="container">
       <ul>
         <li><strong>whodoesnotfollow.me</strong></li>
-        <li class="last"><a href="http://about.me/sdolber">about.me</a></li>
       </ul>
-      <img id='av' src="http://i.imgur.com/yMH8rgz.jpg"/>
     </div>
     </div>
   </body>

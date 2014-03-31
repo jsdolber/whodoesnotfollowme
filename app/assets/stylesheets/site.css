@@ -21,11 +21,14 @@ div.logo h4 {
   color: darkturquoise;
 }
 
+.ads {text-align: center;}
+
 
 .logo a:link {text-decoration: none; color: black}
 .logo a:visited {text-decoration: none;}
 .logo a:hover {text-decoration: none;}
 .logo a:active {text-decoration: none;}
+.logo-title {text-align: center;}
 
 .intro {text-align: center;margin-top: 40px}
 .intro h1 {font-size: 160%}
@@ -216,4 +219,4 @@ hr {border-bottom:1px solid white}
   #results .table td.img-td {border-left:1px solid #ddd;}
 }
 
-
+.searchbox {text-align: center;}

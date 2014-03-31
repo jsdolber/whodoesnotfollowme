@@ -11,14 +11,13 @@
       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515387e41325a358"></script>
     </div>
   
-    <div class="span11 pagination-centered logo row">
-      <div id="push" class="visible-phone" ></div>
+    <div class="logo row">
+      <div id="push" ></div>
         <a href="/">
-          <h1 class="visible-desktop visible-tablet">who does not follow<span class="me">me</span>back</h1>
-          <h3 class="visible-phone">who does not follow<span class="me">me</span>back</h3>
+          <h1 class="logo-title">who does not follow<span class="me">me</span>back</h1>
         </a>
     </div>
-    <div clas="row" class="span11 pagination-centered searchbox">
+    <div class="row searchbox">
       <% form_tag '/unfollowers', :id => 'form', :method => 'unfollowers' do %>
         <div class="input-append">
           <input type="text" id="search-input" placeholder="@twitter" autofocus="autofocus" autocomplete="off">
@@ -51,7 +50,7 @@
        </div>
      </div>
     <div class="row">
-      <div id="results" class="span12">
+      <div id="results">
        <table id="tbl-results" class="center-table table table-bordered table-hover">
          <tbody>
          </tbody>
@@ -59,19 +58,17 @@
       </div>
     </div>
 </div>
-    <div class="intro row">
-      <h1>Find out who doesn't follow you back at Twitter!</h1>
-      <ol>
-        <li>1. Enter your username in the <a id="twboxlink" href="#">@twitter</a> box. </li>
-        <li>2. Press enter.</li>
-        <li>3. That's it! </li>
-        <li class="last">It's free, no registration required and no surprise tweets!</li>
-      </ol>
-    </div>
-    <div id="exact-match-label" class="type-label" >
-    </div>
-    <script type="text/javascript">
-      var is_auth = <%= @is_auth %>;
-   </script>
-</div>
-</div>
+<div class="intro row">
+    <h1>Find who doesn't follow you back at Twitter!</h1>
+    <ol>
+      <li>1. Enter your username in the <a id="twboxlink" href="#">@twitter</a> box. </li>
+      <li>2. Press enter.</li>
+      <li>3. That's it! </li>
+      <li class="last">It's free, no registration required and no surprise tweets!</li>
+    </ol>
+  </div>
+  <div id="exact-match-label" class="type-label" >
+  </div>
+  <script type="text/javascript">
+    var is_auth = <%= @is_auth %>;
+  </script>
