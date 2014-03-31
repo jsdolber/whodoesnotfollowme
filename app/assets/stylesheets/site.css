@@ -3,9 +3,10 @@ body {
 }
 
 div.logo {
-  margin-top: 80px;
-  margin-bottom: 50px;
+/*  margin-top: 80px;*/
+  margin-bottom: 10px;
   font-family: Helvetica;
+  text-align: center;
 }
 
 div.logo h1 {
@@ -30,11 +31,11 @@ div.logo h4 {
 .logo a:active {text-decoration: none;}
 .logo-title {text-align: center;}
 
-.intro {text-align: center;margin-top: 40px}
+.intro {text-align: center;margin-top: 10px; margin-bottom: 30px;}
 .intro h1 {font-size: 160%}
 .intro ol {font-size: 120%; margin-top: 30px; }
 .intro ol li {padding: 10px; color:#555;}
-.intro ol li.last {font-weight: bold;margin-top: 30px;}
+.intro ol li.last {font-weight: bold;margin-top: 10px;}
 
 #search-input {
   background-attachment: scroll;
@@ -50,17 +51,10 @@ div.logo h4 {
   border-width: 3px;
   box-shadow: #555 0px 0px 1px 0px inset;
   color: #555;
-
-  /*display: inline-block;*/
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 28px;
-  /*font-style: normal;*/
-  /*font-variant: normal;*/
-  /*font-weight: normal;*/
   height: 50px;
   line-height: 40px;
-  /*letter-spacing: normal;*/
-  /*text-align: start;*/
   text-indent: 6px;
 
   vertical-align: middle;
@@ -86,7 +80,7 @@ div.logo h4 {
   border-radius: 5px;
   border-style: solid;
   cursor: pointer;
-  height: 58px;
+  height: 45px;
   top: 8px;
   vertical-align: middle;
   width: 62px;
@@ -201,8 +195,6 @@ div.logo h3 {font-size:43px; margin-top:10px}
 
 .twname {margin-left:20px; color:silver;}
 
-.row {margin-bottom:20px}
-
 .separator {margin-top: 10px;}
 
 hr {border-bottom:1px solid white}
@@ -219,4 +211,4 @@ hr {border-bottom:1px solid white}
   #results .table td.img-td {border-left:1px solid #ddd;}
 }
 
-.searchbox {text-align: center;}
+.searchbox {text-align: center; margin-bottom: 20px;}

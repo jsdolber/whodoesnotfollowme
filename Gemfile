@@ -15,9 +15,9 @@ gem 'rack-google-analytics', :require => "rack/google-analytics"
 gem 'omniauth'
 gem 'rack-recaptcha', :require => "rack/recaptcha"
 gem 'bcrypt-ruby', :require => "bcrypt"
-gem 'rack-less'
-gem 'less'
-gem 'erubis', "~> 2.7.0"
+#gem 'rack-less'
+#gem 'less'
+
 gem 'dm-validations'
 gem 'dm-timestamps'
 gem 'dm-migrations'
@@ -25,7 +25,7 @@ gem 'dm-constraints'
 gem 'dm-aggregates'
 gem 'dm-core'
 
-gem 'therubyracer'
+#gem 'therubyracer'
 
 gem 'foreman'
 

@@ -3,7 +3,6 @@ module Whodoesnotfollowme
   register AnalyticsInitializer
   register OmniauthInitializer
   register RecatpchaInitializer
-    register LessInitializer
     register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers

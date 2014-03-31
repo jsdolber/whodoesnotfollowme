@@ -14,6 +14,11 @@ $("#search-button").hover(function(){$(this).fadeTo(1, 1)});
 $(".hero-unit").hover(function(){$("#search-button").fadeTo(1, 0.5)});
 $("#av").toggle();
 $("#twboxlink").click(function(){$("#search-input").focus()});
+
+$('.pull-down').each(function() {
+    $(this).css('margin-top', $(this).parent().height()-$(this).height()-240);
+});
+
 var request;
 
 $(document).keypress(function(e) {
