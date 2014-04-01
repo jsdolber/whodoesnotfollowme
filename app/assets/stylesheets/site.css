@@ -35,9 +35,9 @@ div.logo h4 {
 
 .intro {text-align: center;margin-top: 10px; margin-bottom: 30px;}
 .intro h1 {font-size: 160%}
-.intro ol {font-size: 120%; margin-top: 30px; }
-.intro ol li {padding: 10px; color:#555;}
-.intro ol li.last {font-weight: bold;margin-top: 10px;}
+.intro ul {font-size: 120%; margin-top: 30px; list-style-type:none; }
+.intro ul li {padding: 10px; color:#555;}
+.intro ul li.last {font-weight: bold;margin-top: 10px;}
 
 #search-input {
   background-attachment: scroll;
@@ -195,7 +195,7 @@ div.logo h3 {font-size:43px; margin-top:10px}
 
 .img-td {border-right:1px solid #ddd;text-align:center}
 
-.twname {margin-left:20px; color:silver;}
+.twname {margin-left:20px; color:#777;}
 
 .separator {margin-top: 10px;}
 
@@ -214,3 +214,7 @@ hr {border-bottom:1px solid white}
 }
 
 .searchbox {text-align: center; margin-bottom: 20px;}
+
+.unfollowed-title {color:#555;font-weight: bold;margin-top: 20px;margin-bottom: 20px;}
+
+.tweet-text {color:#555;}

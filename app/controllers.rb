@@ -9,6 +9,7 @@ Whodoesnotfollowme::App.controller do
 
     get :back do
       @is_auth = !session[:id].nil?
+      @recent_unfollowers = Unfollower.sample_unfollowers
       render 'index'
     end
 
@@ -68,18 +69,16 @@ Whodoesnotfollowme::App.controller do
                                   "name" => user.name, 
                                   "screen_name" => user.screen_name,
                                   "last_tweet" =>  last_tweet_text})
-            uu = Unfollower.first_or_create(:avatar_url => user.profile_image_url,
-                           :name => user.name,
-                           :screen_name => user.screen_name,
-                           :last_tweet => last_tweet_text)
           end 
         end
 
         rescue Twitter::Error::TooManyRequests => error
           return {:msg => "Too many attempts. Please try again in 15 minutes."}.to_json 
         rescue Exception => e
-          return {:msg => e.message }
+          return {:msg => e.message }.to_json
         end
+
+        Unfollower.create_or_update(u_unfollowers)
 
         u_unfollowers.to_json
 
