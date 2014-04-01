@@ -2,6 +2,8 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+#loading-bar {text-align: center;margin-bottom: 20px;color:#333;}
+
 div.logo {
 /*  margin-top: 80px;*/
   margin-bottom: 10px;
@@ -22,7 +24,7 @@ div.logo h4 {
   color: darkturquoise;
 }
 
-.ads {text-align: center;}
+.ads {text-align: center;margin-top: 30px}
 
 
 .logo a:link {text-decoration: none; color: black}
@@ -118,7 +120,7 @@ div.logo h4 {
 
 @media only screen and (min-height: 700px) {
   div.logo {
-    margin-top: 80px
+    margin-top: 40px
   }
 }
 

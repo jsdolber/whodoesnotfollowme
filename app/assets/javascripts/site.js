@@ -103,7 +103,7 @@ function make_request(name) {
                     .html(rec.name).addClass('twname')
                   )
               )
-              .append($('<td>')
+              .append($('<td style="text-align:center;vertical-align: middle !important;">')
                   .append($('<a>')
                   .addClass('unfollow btn btn-large btn-primary')
                   .text("unfollow")
