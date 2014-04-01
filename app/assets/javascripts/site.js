@@ -103,7 +103,7 @@ $(document).ready(function(){
         var rec = data[i];
         $("#tbl-results").find('tbody')
             .append($('<tr>')
-                .append($('<td>')
+                .append($('<td style="vertical-align: middle !important;">')
                     .append($('<img>')
                       .attr('src', rec.avatar.toString().replace("normal", "bigger"))
                       .addClass('img-rounded')
