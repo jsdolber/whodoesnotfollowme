@@ -59,12 +59,26 @@ Whodoesnotfollowme::App.controller do
         unfollowers = (friends - followers).each_slice(100).to_a
 
         u_unfollowers = Array.new
-        unfollowers.each do |arr| erik.users(arr).each do |user| u_unfollowers.push({"avatar" => user.profile_image_url, "name" => user.name, "screen_name" => user.screen_name }) end end
+
+        unfollowers.each do |arr| 
+          erik.users(arr).each do |user| 
+            last_tweet = erik.user_timeline(user.screen_name, :count => 1).last
+            last_tweet_text = last_tweet.nil? ? '' : last_tweet.text
+            u_unfollowers.push({"avatar" => user.profile_image_url, 
+                                  "name" => user.name, 
+                                  "screen_name" => user.screen_name,
+                                  "last_tweet" =>  last_tweet_text})
+            uu = Unfollower.first_or_create(:avatar_url => user.profile_image_url,
+                           :name => user.name,
+                           :screen_name => user.screen_name,
+                           :last_tweet => last_tweet_text)
+          end 
+        end
 
         rescue Twitter::Error::TooManyRequests => error
           return {:msg => "Too many attempts. Please try again in 15 minutes."}.to_json 
-        rescue
-          return {:msg => "Something went wrong"}
+        rescue Exception => e
+          return {:msg => e.message }
         end
 
         u_unfollowers.to_json
