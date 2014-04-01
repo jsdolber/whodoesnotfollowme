@@ -114,6 +114,9 @@ function make_request(name) {
        );
     }
 
+    if ($(".ads").css("margin-bottom") != "92px")
+      $(".ads").css("margin-bottom", "92px");
+
     $("#results").slideDown(300);
 
   });
