@@ -51,19 +51,16 @@ Whodoesnotfollowme::App.controller do
           config.access_token_secret = account.oauth_secret
         end
         
-        friends = Array.new
-        followers = Array.new 
+        friends = erik.friend_ids(name, :count=>5000).to_a
+        followers = erik.follower_ids(name, :count=>5000).to_a
 
-        erik.follower_ids(name).each do |user| followers.push(user) end
-        erik.friend_ids(name).each do |user| friends.push(user) end
+        unfollowers = (friends - followers).sample(20).to_a
 
-        unfollowers = (friends - followers).each_slice(100).to_a
-
-        u_unfollowers = Array.new
+        u_unfollowers = []
 
         unfollowers.each do |arr| 
           erik.users(arr).each do |user| 
-            last_tweet = erik.user_timeline(user.screen_name, :count => 1).last
+            last_tweet = user.tweet
             last_tweet_text = last_tweet.nil? ? '' : last_tweet.text
             u_unfollowers.push({"avatar" => user.profile_image_url, 
                                   "name" => user.name, 
