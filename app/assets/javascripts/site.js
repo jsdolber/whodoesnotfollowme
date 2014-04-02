@@ -78,7 +78,7 @@ $(document).ready(function(){
 
       $(".unfollowed-title").hide();
 
-      populateResults(data)
+      populateResults(data);
 
     });
 

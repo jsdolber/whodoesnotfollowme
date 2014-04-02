@@ -9,19 +9,19 @@ class Unfollower
   property :last_tweet, String
 
   def self.create_or_update(unfollowers)
-	unfollowers.sample(10).each do |uf|
-		u = Unfollower.all(:screen_name => uf["screen_name"])
+  	unfollowers.sample(10).each do |uf|
+  		u = Unfollower.first(:screen_name => uf["screen_name"])
 
-		if u.nil?
-			u = Unfollower.new(:avatar_url => uf["avatar"],
-                            :name =>uf["name"],
-                            :screen_name => uf["screen_name"])
-		end
+  		if u.nil?
+  			u = Unfollower.new(:avatar_url => uf["avatar"],
+                              :name =>uf["name"],
+                              :screen_name => uf["screen_name"])
+  		end
 
-		u.last_tweet = uf["last_tweet"]
+  		u.last_tweet = uf["last_tweet"]
 
-		u.save!
-	end
+  		u.save!
+  	end
   end
 
   def self.sample_unfollowers
