@@ -2,7 +2,7 @@ source "https://rubygems.org/"
 
 # Server requirements
 # gem 'thin' # or mongrel
-gem 'thin'
+gem 'unicorn'
 
 # gem 'trinidad', :platform => 'jruby'
 
