@@ -78,7 +78,7 @@ $(document).ready(function(){
 
       $(".unfollowed-title").hide();
 
-      populateResults(data);
+      populateResults(data, true);
 
     });
 
@@ -97,12 +97,14 @@ $(document).ready(function(){
     }); 
   }
 
-  populateResults = function(data)
+  populateResults = function(data, show_action_button)
   {
+    $("#tbl-results").find('tbody').html('');
+    
     for (var i = 0; i < data.length; i++) {
         var rec = data[i];
         $("#tbl-results").find('tbody')
-            .append($('<tr>')
+            .append($('<tr id="' + rec.screen_name + '">')
                 .append($('<td style="vertical-align: middle !important;">')
                     .append($('<img>')
                       .attr('src', rec.avatar.toString().replace("normal", "bigger"))
@@ -125,18 +127,24 @@ $(document).ready(function(){
                     .attr('style', 'margin-left:0px;margin-right:0px')
                     .append($('<span>')
                       .html(rec.last_tweet).addClass('tweet-text')
+                      )
                     )
-                    )
+                  )
                 )
-                .append($('<td style="text-align:center;vertical-align: middle !important;">')
-                    .append($('<a>')
-                    .addClass('unfollow btn btn-large btn-primary')
-                    .text("unfollow")
-                    .attr('href', 'http://twitter.com/' + rec.screen_name)
-                    .attr('target', '_blank')
-                    )
-                )
-         );
+
+        if (show_action_button) {
+          var addbutton = function(screen_name){
+            $("#" + screen_name).append($('<td style="text-align:center;vertical-align: middle !important;">')
+                  .append($('<a>')
+                  .addClass('unfollow btn btn-large btn-primary')
+                  .text("unfollow")
+                  .attr('href', 'http://twitter.com/' + screen_name)
+                  .attr('target', '_blank')
+                  )
+                )            
+          };
+          setTimeout(addbutton(rec.screen_name), 500);
+        }        
       }
 
     if ($(".ads").css("margin-bottom") != "92px")
@@ -145,6 +153,6 @@ $(document).ready(function(){
     $("#results").slideDown(300);
   }
 
-  populateResults(recent_unfollowers);
+  populateResults(recent_unfollowers, false);
 
 });
