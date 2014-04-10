@@ -106,10 +106,14 @@ $(document).ready(function(){
         $("#tbl-results").find('tbody')
             .append($('<tr id="' + rec.screen_name + '">')
                 .append($('<td style="vertical-align: middle !important;">')
-                    .append($('<img>')
+                   .append($('<a>')
+                    .attr('href', 'http://twitter.com/' + rec.screen_name)
+                    .attr('target', '_blank')
+                                        .append($('<img>')
                       .attr('src', rec.avatar.toString().replace("normal", "bigger"))
                       .addClass('img-rounded')
                     ).addClass('img-td').css('text-align', 'center')
+                    )
                 )
                 .append($('<td>')
                     .append($('<div>')
@@ -132,7 +136,7 @@ $(document).ready(function(){
                   )
                 )
 
-        if (show_action_button) {
+        if (show_action_button && $(window).width() > 320) {
           var addbutton = function(screen_name){
             $("#" + screen_name).append($('<td style="text-align:center;vertical-align: middle !important;">')
                   .append($('<a>')
