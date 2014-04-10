@@ -34,7 +34,7 @@
 	  <div class="container">       
        <div class="row">
           <div class="col-md-2">
-            <div>
+            <div class="no-show-mobile">
               <div class="visible-desktop visible-tablet addthis_toolbox addthis_floating_style addthis_32x32_style" style="left:50px;top:50px;">
                 <a class="addthis_button_preferred_1"></a>
                 <a class="addthis_button_preferred_2"></a>
@@ -49,7 +49,7 @@
           <div class="col-md-8">
             <%= yield %>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 no-show-mobile">
             <script type="text/javascript">
               ( function() {
                 if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
@@ -78,7 +78,7 @@
             </script>
           </div>
        </div>
-        <div class="row ads">
+        <div class="row ads no-show-mobile">
           <%= partial 'ads' %>
        </div>
      </div> <!-- /container -->

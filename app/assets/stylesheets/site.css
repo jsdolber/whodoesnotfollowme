@@ -213,6 +213,17 @@ hr {border-bottom:1px solid white}
   #results .table td.img-td {border-left:1px solid #ddd;}
 }
 
+@media (max-width: 320px) {
+  .no-show-mobile {display: none;}
+  .hero-unit {margin-top:0px;}
+  #search-input {width: 240px;}
+  .sub-title {
+    padding: 10px;
+  }
+  #tbl-results {width: 90%;}
+  .unfollowed-title {padding: 3px;}
+}
+
 .searchbox {text-align: center; margin-bottom: 20px;}
 
 .unfollowed-title {color:#555;font-weight: bold;margin-top: 20px;margin-bottom: 20px;}
