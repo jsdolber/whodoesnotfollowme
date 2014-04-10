@@ -2,8 +2,8 @@ source "https://rubygems.org/"
 
 # Server requirements
 # gem 'thin' # or mongrel
-#gem 'unicorn'
-gem 'thin'
+#
+
 
 # gem 'trinidad', :platform => 'jruby'
 
@@ -32,12 +32,14 @@ gem 'foreman'
 
 group :development do
   gem 'dm-sqlite-adapter'
+  gem 'thin'
 end
 
 group :production do
  gem 'pg'
  gem 'do_postgres'
  gem 'dm-postgres-adapter'
+ gem 'unicorn'
 end
 
 # Test requirements
